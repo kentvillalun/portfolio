@@ -9,6 +9,7 @@ import { Home } from "./components/sections/Home";
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   
 
   return (
@@ -19,8 +20,7 @@ function App() {
           isLoaded ? "opacity-100" : "opeacity-0"
         } bg-[#060A14] text-white`}
       >
-        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} isScrolled={isScrolled} setIsScrolled={setIsScrolled}/>
         <Home />
       </div>
     </>
