@@ -7,6 +7,7 @@ body {
   font-family: "Space Grotesk", sans-serif;
   background: #060a14;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
 @layer utilities {
@@ -47,7 +48,5 @@ body {
     rgba(37, 99, 235, 0.35) 70%,
     transparent 100%
   );
-  filter: blur(150px);
-  opacity: 0.9;
 }
 

@@ -1,9 +1,8 @@
 import "./App.css";
 import { LoadingScreen } from "./components/LoadingScreen";
 import "../src/index.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navbar } from "./components/Navbar";
-import { MobileMenu } from "./components/MobileMenu";
 import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
 
@@ -12,17 +11,39 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   
+  useEffect(() => {
+    const root = document.documentElement;
+    const body = document.body;
+
+    if (!isLoaded) {
+      // Disable scroll while loading
+      root.style.overflow = 'hidden';
+      body.style.overflow = 'hidden';
+    } else {
+      // Restore scroll when loading completes
+      root.style.overflow = '';
+      body.style.overflow = '';
+    }
+
+    // Cleanup on unmount just in case
+    return () => {
+      root.style.overflow = '';
+      body.style.overflow = '';
+    };
+  }, [isLoaded]);
+  
 
   return (
     <>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       <div
         className={`min-h-screen transition-opacity duration-700 ${
-          isLoaded ? "opacity-100" : "opeacity-0"
+          isLoaded ? "opacity-100" : "opacity-0"
         } bg-[#060A14] text-white`}
       >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} isScrolled={isScrolled} setIsScrolled={setIsScrolled}/>
-        <Home />
+
+        <Home isLoaded={isLoaded} />
         <About />
       </div>
     </>
