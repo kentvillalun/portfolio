@@ -23,7 +23,7 @@ export const MobileMenu = ({
       <div className="bg-[#060A14] min-w-full rounded-lg flex flex-col gap-3 px-4 py-7 text-[16px] border-0.5 border-white/10 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_10px_30px_rgba(0,0,0,0.4)]">
         <a
           href="#about"
-          className="text-gray-300 hover:text-white transition-colors "
+          className="text-white transition-colors"
           onClick={() => setMenuOpen(false)}
         >
           About
@@ -31,7 +31,7 @@ export const MobileMenu = ({
 
         <a
           href="#projects"
-          className="text-gray-300 hover:text-white transition-colors"
+          className="text-white transition-colors"
           onClick={() => setMenuOpen(false)}
         >
           Projects
@@ -39,7 +39,7 @@ export const MobileMenu = ({
 
         <a
           href="#skills"
-          className="text-gray-300 hover:text-white transition-colors"
+          className="text-white transition-colors"
           onClick={() => setMenuOpen(false)}
         >
           Skills
@@ -47,7 +47,7 @@ export const MobileMenu = ({
 
         <a
           href="#contact"
-          className="text-gray-300 hover:text-white transition-colors "
+          className="text-white transition-colors "
           onClick={() => setMenuOpen(false)}
         >
           Contact
@@ -55,7 +55,7 @@ export const MobileMenu = ({
 
         <a
           href=""
-          className="text-gray-300 hover:text-white transition-colors "
+          className="text-white transition-colors "
           onClick={() => setMenuOpen(false)}
         >
           Resume
