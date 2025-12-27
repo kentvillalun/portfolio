@@ -7,7 +7,7 @@ import { useTypewriter } from "react-simple-typewriter";
 export const Home = ({ isLoaded }) => {
 
   const [text] = useTypewriter({
-    words: ["n aspiring developer.", " student leader.", " creative designer"],
+    words: ["n aspiring developer.", " student leader.", " creative designer."],
     loop: true,
     delaySpeed: 2000,
   });
