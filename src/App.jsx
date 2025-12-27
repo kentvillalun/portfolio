@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
+import { Projects } from "./components/sections/Projects"
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -45,6 +46,7 @@ function App() {
 
         <Home isLoaded={isLoaded} />
         <About />
+        <Projects />
       </div>
     </>
   );

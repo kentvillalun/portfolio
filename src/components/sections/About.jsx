@@ -14,8 +14,8 @@ export const About = () => {
         <div className="rounded-3xl p-4.5 md:p-10 border-white/10 hover:-translate-y-1 transition-all duration-500 ease-in-out transform-gpu border bg-[#00000025] w-full md:mx-0 flex flex-col md:flex-row items-center md:items-start justify-between gap-6 md:gap-10">
           <div className="w-full md:w-[40%]">
             <img
-              src="../src/assets/about-pic.jpg"
-              alt=""
+              src="../src/assets/images/about-pic.jpg"
+              alt="A photo of a guy facing his and wearing polo shirt."
               className="rounded-2xl mb-2 w-full object-cover object-center"
             />
             <div className="flex flex-row items-center justify-center md:justify-start gap-2 transition-all ease-in-out duration-300 ">
