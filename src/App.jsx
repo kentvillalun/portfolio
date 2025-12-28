@@ -46,7 +46,7 @@ function App() {
         } bg-[#060A14] text-white`}
       >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} isScrolled={isScrolled} setIsScrolled={setIsScrolled}/>
-
+        
         <Home isLoaded={isLoaded} />
         <About />
         <Projects />

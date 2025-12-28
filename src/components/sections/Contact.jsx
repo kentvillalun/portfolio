@@ -4,6 +4,7 @@ import { GithubIcon } from "../icons/GithubIcon";
 import { LinkedinIcon } from "../icons/LinkedinIcon";
 import { MailIcon } from "../icons/MailIcon";
 import emailjs from "emailjs-com";
+import { Meteors } from "../ui/Meteors";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,9 +34,10 @@ export const Contact = () => {
 
   return (
     <section
-      className="min-h-screen flex justify-center items-center py-20"
+      className="min-h-screen flex justify-center items-center py-20 relative"
       id="contact"
     >
+      <Meteors number={25}/>
       <RevealOnScroll>
         <div className="mx-auto px-6 max-w-3xl md:max-w-5x">
           <div className="text-center mb-11.25 ">

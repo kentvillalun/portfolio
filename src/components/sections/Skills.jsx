@@ -8,6 +8,7 @@ import { TailwindIcon } from "../icons/TailwindIcon";
 import { GitIcon } from "../icons/GitIcon";
 import { NetlifyIcon } from "../icons/NetlifyIcon";
 import { RevealOnScroll } from "../RevealOnScroll";
+import { Meteors } from "../ui/Meteors";
 
 export const Skills = () => {
   const technologies = [
@@ -25,9 +26,10 @@ export const Skills = () => {
   return (
     <>
       <section
-        className="min-h-[50%] flex items-center justify-center py-20 "
+        className="min-h-[50%] flex items-center justify-center py-20 relative"
         id="skills"
       >
+        <Meteors number={20}/>
         <RevealOnScroll>
           <div className="mx-auto px-6 max-w-3xl md:max-w-5xl">
             <div className="mb-11.25 text-center">
@@ -37,11 +39,11 @@ export const Skills = () => {
 
               <div className="relative overflow-hidden px-6">
                 <div className="flex animate-marquee ">
-                  {[...technologies, ...technologies, ...technologies].map(
-                    ({ name, Icon, color, idx }) => (
+                  {[...technologies, ...technologies].map(
+                    ({ name, Icon, color, key }) => (
                       <div
                         className="shrink-0 md:shrink py-4 mr-10 group z-50 "
-                        key={idx}
+                        key={key}
                       >
                         <div className="">
                           <Icon

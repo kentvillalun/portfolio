@@ -6,6 +6,7 @@ import { GithubIcon } from "../icons/GithubIcon";
 import { ReactIcon } from "../icons/ReactIcon";
 import { TailwindIcon } from "../icons/TailwindIcon";
 import { RevealOnScroll } from "../RevealOnScroll";
+import { Meteors } from "../ui/Meteors";
 export const Projects = () => {
   const iBadyetKon = [
     { name: "HTML", Icon: HtmlIcon, color: "#E34F26" },
@@ -22,8 +23,9 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-20 relative"
     >
+      <Meteors number={25}/>
       <RevealOnScroll>
         <div className="mx-auto px-6 max-w-3xl md:max-w-5xl">
           <div className="mb-11.25 text-center">

@@ -5,6 +5,7 @@ import { LinkedinIcon } from "../icons/LinkedinIcon";
 import { useTypewriter } from "react-simple-typewriter";
 import { RevealOnScroll } from "../RevealOnScroll";
 
+
 export const Home = ({ isLoaded }) => {
   const [text] = useTypewriter({
     words: ["n aspiring developer.", " student leader.", " creative designer."],
@@ -17,6 +18,7 @@ export const Home = ({ isLoaded }) => {
       id="home"
       className="min-h-screen flex items-center justify-center relative bg-[#060A14]"
     >
+      
       {/* Gradient Background */}
       <div
         className={`absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 w-screen h-screen gradient-background transition-all duration-1000 ease-out pointer-events-none
@@ -29,6 +31,7 @@ export const Home = ({ isLoaded }) => {
       ></div>
 
       <RevealOnScroll>
+        
         <div className="z-10 text-center flex flex-col gap-9.25 mx-auto">
           <div className="">
             <span className="text-xl md:text-2xl transition-all">Hey! I'm</span>

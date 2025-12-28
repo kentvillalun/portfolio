@@ -10,7 +10,7 @@ export const MenuIcon = () => {
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="lucide lucide-text-align-justify-icon lucide-text-align-justify"
+      className="lucide lucide-text-align-justify-icon lucide-text-align-justify"
     >
       <path d="M3 5h18" />
       <path d="M3 12h18" />
