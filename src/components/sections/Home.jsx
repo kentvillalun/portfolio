@@ -53,10 +53,10 @@ export const Home = ({ isLoaded }) => {
               <DownloadIcon />
               <span className="">Download Resume</span>
             </button>
-            <button className="flex flex-row gap-3.25 py-4 px-10.5 rounded-lg bg-[#3B82F6] hover:bg-[#0876e4] transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-[0,0,15px_rgba(59, 130, 246, 0.5)] font-semibold">
+            <a href="#contact" className="flex flex-row gap-3.25 py-4 px-10.5 rounded-lg bg-[#3B82F6] hover:bg-[#0876e4] transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-[0,0,15px_rgba(59, 130, 246, 0.5)] font-semibold">
               <MailIcon />
               <span className="">Get in Touch</span>
-            </button>
+            </a>
           </div>
 
           <div className="flex flex-row justify-center gap-5">
