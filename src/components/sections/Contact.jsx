@@ -27,7 +27,6 @@ export const Contact = () => {
         setFormData({ name: "", email: "", message: "" });
       })
       .catch((err) => {
-        console.log(err)
         alert("Oops! Something went wrong. Please try again.");
       });
   };
