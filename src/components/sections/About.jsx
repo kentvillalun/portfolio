@@ -11,7 +11,7 @@ export const About = () => {
           About me{" "}
         </h2>
 
-        <div className="rounded-3xl p-4.5 md:p-10 border-white/10 hover:-translate-y-1 transition-all duration-500 ease-in-out transform-gpu border bg-[#00000025] w-full md:mx-0 flex flex-col md:flex-row items-center md:items-start justify-between gap-6 md:gap-10">
+        <div className="rounded-3xl  md:p-10 md:border-white/10 md:hover:-translate-y-1 transition-transform duration-500 ease-out transform-gpu md:border md:bg-[#00000025] w-full md:mx-0 flex flex-col md:flex-row items-center md:items-start justify-between gap-6 md:gap-10">
           <div className="w-full md:w-[40%]">
             <img
               src="../src/assets/images/about-pic.jpg"

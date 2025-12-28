@@ -6,6 +6,7 @@ import { Navbar } from "./components/Navbar";
 import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects"
+import { Skills } from "./components/sections/Skills";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -47,6 +48,7 @@ function App() {
         <Home isLoaded={isLoaded} />
         <About />
         <Projects />
+        <Skills />
       </div>
     </>
   );
