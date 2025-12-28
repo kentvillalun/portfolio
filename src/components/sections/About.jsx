@@ -1,10 +1,12 @@
 import { CakeIcon } from "../icons/CakeIcon";
+import { RevealOnScroll } from "../RevealOnScroll"
 export const About = () => {
   return (
     <section
       className="min-h-screen flex items-center justify-center py-20"
       id="about"
     >
+      <RevealOnScroll>
       <div className="mx-auto px-6 max-w-3xl md:max-w-5xl">
         <h2 className="font-bold text-3xl md:text-4xl mb-8 text-center">
           {" "}
@@ -71,6 +73,7 @@ export const About = () => {
           </div>
         </div>
       </div>
+      </RevealOnScroll>
     </section>
   );
 };
