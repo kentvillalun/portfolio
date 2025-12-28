@@ -7,6 +7,10 @@ import { ReactIcon } from "../icons/ReactIcon";
 import { TailwindIcon } from "../icons/TailwindIcon";
 import { RevealOnScroll } from "../RevealOnScroll";
 import { Meteors } from "../ui/Meteors";
+import ibadyetkon from "/src/assets/images/ibadyetkon.png";
+import portfoliopic from "/src/assets/images/portfolio.png";
+
+
 export const Projects = () => {
   const iBadyetKon = [
     { name: "HTML", Icon: HtmlIcon, color: "#E34F26" },
@@ -41,7 +45,7 @@ export const Projects = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-lg border border-white/10 hover:border-blue-900 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025]">
               <img
-                src="../src/assets/images/ibadyetkon.png"
+                src={ibadyetkon}
                 alt=""
                 className="group-hover:scale-105 transition-all "
               />
@@ -87,7 +91,7 @@ export const Projects = () => {
 
             <div className="rounded-lg border border-white/10 hover:border-blue-900 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025]">
               <img
-                src="../src/assets/images/portfolio.png"
+                src={portfoliopic}
                 alt=""
                 className="group-hover:scale-105 transition-all "
               />

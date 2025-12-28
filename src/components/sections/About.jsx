@@ -1,6 +1,7 @@
 import { CakeIcon } from "../icons/CakeIcon";
 import { RevealOnScroll } from "../RevealOnScroll";
 import { Meteors } from "../ui/Meteors";
+import aboutPic from "/src/assets/images/about-pic.jpg";
 
 export const About = () => {
   return (
@@ -22,7 +23,7 @@ export const About = () => {
           <div className="rounded-3xl  md:p-10 md:border-white/10 md:hover:-translate-y-1 transition-transform duration-500 ease-out transform-gpu md:border md:bg-[#00000025] w-full md:mx-0 flex flex-col md:flex-row items-center md:items-start justify-between gap-6 md:gap-10">
             <div className="w-full md:w-[40%]">
               <img
-                src="../src/assets/images/about-pic.jpg"
+                src={aboutPic}
                 alt="A photo of a guy facing his and wearing polo shirt."
                 className="rounded-2xl mb-2 w-full object-cover object-center"
               />
