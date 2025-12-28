@@ -35,7 +35,7 @@ export const Projects = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="rounded-lg border border-white/10 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025]">
+          <div className="rounded-lg border border-white/10 hover:border-blue-900 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025]">
             <img
               src="../src/assets/images/ibadyetkon.png"
               alt=""
@@ -81,7 +81,7 @@ export const Projects = () => {
             </div>
           </div>
 
-          <div className="rounded-lg border border-white/10 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025]">
+          <div className="rounded-lg border border-white/10 hover:border-blue-900 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025]">
             <img
               src="../src/assets/images/portfolio.png"
               alt=""
@@ -89,7 +89,7 @@ export const Projects = () => {
             />
             {/* this div will be a tag later on */}
             <div className="p-6 flex flex-col gap-5">
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 ">
                 <h3 className="text-xl font-bold">Personal Portfolio</h3>
                 <p>
                   A modern portfolio website where I display my projects and technical stack.
