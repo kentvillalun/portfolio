@@ -1,13 +1,8 @@
+<img width="1894" height="865" alt="image" src="https://github.com/user-attachments/assets/ef98fbd6-3b3e-469d-850f-234d84178f00" />
+
 # Personal Portfolio Website
 
 A clean, responsive personal portfolio built to showcase my projects, skills, and journey as an aspiring web developer.
-
----
-
-## 📸 Screenshot
-
-![Portfolio Preview](<img width="1894" height="865" alt="image" src="https://github.com/user-attachments/assets/ef98fbd6-3b3e-469d-850f-234d84178f00" />
-)
 
 ---
 
@@ -58,3 +53,4 @@ Even though this is a portfolio project, I still faced real challenges like:
 ## 🔗 Live Demo
 
 🌐 https://YOUR-LIVE-DEMO-LINK.com
+
