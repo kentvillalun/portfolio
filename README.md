@@ -34,8 +34,8 @@ It also helped me apply UI design principles and improve how I present myself pr
 
 ## 🛠 Tech used
 
-- React
-- Tailwind CSS
+<img width="1024" height="912" alt="image" src="https://github.com/user-attachments/assets/69408a68-dc05-4d3c-a9bf-1381ee8a9944" />
+<img width="1024" height="626" alt="image" src="https://github.com/user-attachments/assets/84d72fce-6c84-45fa-b45e-0ed3a522c1a6" />
 
 ---
 
@@ -50,7 +50,12 @@ Even though this is a portfolio project, I still faced real challenges like:
 
 ---
 
-## 🔗 Live Demo
+<a href="https://kentvillalun.github.io/portfolio/" target="_blank">
+    <img 
+      src="https://img.shields.io/static/v1?message=Portfolio&logo=ko-fi&label=&color=000000&logoColor=white&labelColor=&style=for-the-badge"
+      height="40"
+      alt="portfolio logo"
+    />
+  </a>
 
-🌐 https://YOUR-LIVE-DEMO-LINK.com
 
