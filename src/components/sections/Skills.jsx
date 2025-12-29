@@ -47,7 +47,7 @@ export const Skills = () => {
                       >
                         <div className="">
                           <Icon
-                            className={`md:w-24 w-10 opacity-10 hover:opacity-100 transition-all cursor-pointer`}
+                            className={`md:w-24 w-10 opacity-100 md:opacity-10 md:hover:opacity-100 transition-all cursor-pointer`}
                             fill={color}
                           />
                         </div>

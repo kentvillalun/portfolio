@@ -21,11 +21,11 @@ export const Home = ({ isLoaded }) => {
       
       {/* Gradient Background */}
       <div
-        className={`absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 w-screen h-screen gradient-background transition-all duration-1000 ease-out pointer-events-none
+        className={`absolute top-0 left-1/2 -translate-x-1/2 md:-translate-y-1/3 w-screen h-screen gradient-background transition-all duration-1000 ease-out pointer-events-none
           ${
             isLoaded
-              ? "opacity-100 scale-100 blur-[150px] gradient-float"
-              : "opacity-0 scale-75 blur-[250px]"
+              ? "opacity-100 scale-100 md:blur-[150px] blur-[80px] gradient-float"
+              : "opacity-0 scale-75 md:blur-[250px] blur-[120px]"
           }
         `}
       ></div>
