@@ -34,10 +34,12 @@ It also helped me apply UI design principles and improve how I present myself pr
 
 ## 🛠 Tech used
 
- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
   <img width="12" />
   <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" height="40" alt="tailwindcss logo"  />
   <img width="12" />
+</div>
 
 ---
 
@@ -59,6 +61,7 @@ Even though this is a portfolio project, I still faced real challenges like:
       alt="portfolio logo"
     />
   </a>
+
 
 
 
