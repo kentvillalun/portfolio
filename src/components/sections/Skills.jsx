@@ -39,7 +39,7 @@ export const Skills = () => {
 
               <div className="relative overflow-hidden px-6">
                 <div className="flex animate-marquee ">
-                  {[...technologies, ...technologies].map(
+                  {[...technologies, ...technologies, ...technologies].map(
                     ({ name, Icon, color, key }) => (
                       <div
                         className="shrink-0 md:shrink py-4 mr-10 group z-50 "
@@ -47,7 +47,7 @@ export const Skills = () => {
                       >
                         <div className="">
                           <Icon
-                            className={`md:w-24 w-10 opacity-100 md:opacity-10 md:hover:opacity-100 transition-all cursor-pointer`}
+                            className={`md:w-24 w-15 opacity-100 md:opacity-45 md:hover:opacity-100 transition-all cursor-pointer`}
                             fill={color}
                           />
                         </div>
