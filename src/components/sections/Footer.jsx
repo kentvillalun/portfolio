@@ -5,10 +5,10 @@ import { MailIcon } from "../icons/MailIcon";
 
 export const Footer = () => {
   return (
-    <section className="min-h-50% bg-[#060A14] flex py-10 justify-center border border-t-white/10 border-r-0 border-l-0 border-b-0 items-center">
+    <section className="min-h-50% bg-[#060A14] flex py-10 justify-center border border-t-white/10 border-r-0 border-l-0 border-b-0 items-center ">
       <RevealOnScroll>
         <div className="">
-          <div className="flex md:flex-row mx-auto px-6 max-w-3xl md:max-w-5xl gap-10 justify-between flex-col border-b-white/10 border border-t-0 border-r-0 border-l-0 mb-3">
+          <div className="flex md:flex-row mx-auto px-6 max-w-3xl lg:min-w-5xl lg:max-w-7xl md:max-w-5xl gap-10 justify-between flex-col border-b-white/10 border border-t-0 border-r-0 border-l-0 mb-3">
             <div className="">
               <div className="mb-4.75">
                 <h3 className="font-bold text-[24px] mb-1.5">Kent</h3>
