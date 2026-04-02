@@ -63,7 +63,7 @@ export const About = () => {
                 interfaces that people actually enjoy using.
               </p>
               <p className="">
-                Right now, I’m focused on mastering frontend development, but my
+                Right now, I’m focused on mastering full stack development, but my
                 journey doesn’t stop there. I’m working toward becoming a{" "}
                 <span className="text-white font-semibold">
                   software engineer
@@ -84,3 +84,8 @@ export const About = () => {
     </section>
   );
 };
+
+// I build things I'm proud of — things meant to be used, not just submitted. I'm a BSIT junior from Ilocos with a simple principle: whether it's a class activity or a full project, I give it my all — not just for completion, but for the craft. That's how I make sure I always get something real out of what I build.
+// My capstone project, EcoProfit, is proof of that. I realized that if managing recyclables felt more convenient and intuitive, people might actually enjoy it — and that realization turned into a real system, built on real operations in Barangay Beddeng Laud, Vigan City.
+// Beyond code, I'm a student leader and the voice of my class. I care just as much about expressing ideas clearly as I do about writing them in clean code — because good communication is what turns individual work into team work.
+// Right now I'm focused on finishing EcoProfit strong and securing a good internship. Long term, I'm working toward becoming not just a full stack developer, but a software engineer who builds things worth being proud of — with a team that feels the same way.
