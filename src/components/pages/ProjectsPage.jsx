@@ -1,3 +1,8 @@
+import { Navbar } from "../Navbar";
+import { useState } from "react";
+import { ExternalLink, ChevronRight } from "lucide-react";
+import { Meteors } from "../ui/Meteors";
+import { RevealOnScroll } from "../RevealOnScroll";
 import { HtmlIcon } from "../icons/HtmlIcon";
 import { CssIcon } from "../icons/CssIcon";
 import { JsIcon } from "../icons/JsIcon";
@@ -6,8 +11,6 @@ import { GithubIcon } from "../icons/GithubIcon";
 import { ReactIcon } from "../icons/ReactIcon";
 import ecoprofit from "/src/assets/images/ecoprofit.png";
 import { TailwindIcon } from "../icons/TailwindIcon";
-import { RevealOnScroll } from "../RevealOnScroll";
-import { Meteors } from "../ui/Meteors";
 import ibadyetkon from "/src/assets/images/ibadyetkon.png";
 import portfoliopic from "/src/assets/images/portfolio.png";
 import sjf from "/src/assets/images/sjf-algorithm.png";
@@ -17,12 +20,8 @@ import { NextIcon } from "../icons/NextIcon";
 import { color } from "motion";
 import { PostgresIcon } from "../icons/PostgresIcon";
 import { Prismaicon } from "../icons/PrismaIcon";
-import { ExternalLink, ChevronRight } from "lucide-react";
-import { Routes, Route, useNavigate } from "react-router-dom";
 
-export const Projects = () => {
-  const navigate = useNavigate();
-
+export const ProjectsPage = () => {
   const iBadyetKon = [
     { name: "HTML", Icon: HtmlIcon, color: "#E34F26" },
     { name: "CSS", Icon: CssIcon, color: "#663399" },
@@ -55,19 +54,17 @@ export const Projects = () => {
 
   return (
     <section
-      id="projects"
+      id="allprojects"
       className="min-h-screen flex items-center justify-center py-20 relative"
     >
       <Meteors number={25} />
       <RevealOnScroll>
-        <div className="mx-auto px-6 lg:px-0 max-w-3xl md:max-w-5xl">
+        <div className="mx-auto px-6 lg:px-0 max-w-3xl md:max-w-6xl">
           <div className="mb-11.25 text-center">
-            <h2 className="font-bold text-3xl md:text-4xl mb-5">
-              Featured Projects
-            </h2>
+            <h2 className="font-bold text-3xl md:text-4xl mb-5">Projects</h2>
             <p className="text-lg">
-              A selection of projects I've built to practice and showcase my
-              skills.
+              A collection of web projects I've built to solve real problems and
+              grow as a developer.
             </p>
           </div>
 
@@ -99,7 +96,7 @@ export const Projects = () => {
 
               {/* this div will be a tag later on */}
               <div className="p-5 flex flex-col gap-5">
-                <div className="flex flex-col gap-2 justify-between">
+                <div className="flex flex-col gap-2 justify-between h-full">
                   <h3 className="text-lg font-bold group-hover:text-blue-500 text-white transition-all ease-in-out">
                     EcoProfit
                   </h3>
@@ -150,7 +147,7 @@ export const Projects = () => {
 
               {/* this div will be a tag later on */}
               <div className="p-5 flex flex-col gap-5">
-                <div className="flex flex-col gap-2 justify-between">
+                <div className="flex flex-col gap-2 justify-between h-full">
                   <h3 className="text-lg font-bold group-hover:text-blue-500 text-white transition-all ease-in-out">
                     SJF Algorithm Simulator
                   </h3>
@@ -204,7 +201,7 @@ export const Projects = () => {
 
               {/* this div will be a tag later on */}
               <div className="p-5 flex flex-col gap-5">
-                <div className="flex flex-col gap-2 justify-between">
+                <div className="flex flex-col gap-2 justify-between h-full">
                   <h3 className="text-lg font-bold group-hover:text-blue-500 text-white transition-all ease-in-out">
                     LRU Page Replacement Simulator
                   </h3>
@@ -229,22 +226,108 @@ export const Projects = () => {
                 </div>
               </div>
             </div>
-          </div>
 
-          <button
-            className="flex flex-row gap-1 items-center hover:cursor-pointer text-white transition-all hover:text-blue-500 text-center mx-auto mt-7"
-            onClick={() => {
-              navigate("/projects");
-              setTimeout(() => {
-                document
-                  .getElementById("allprojects")
-                  .scrollIntoView({ behavior: "smooth" });
-              }, 100);
-            }}
-          >
-            <p>View All Projects</p>
-            <ChevronRight size={18} />
-          </button>
+            <div
+              className="rounded-lg border border-white/10 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025] hover:bg-white/10 relative "
+              onClick={() =>
+                window.open(
+                  "https://github.com/kentvillalun/portfolio",
+                  "_blank",
+                )
+              }
+            >
+              <a
+                className="top-3 right-3 absolute bg-[rgba(0,0,0,0.25)] backdrop-blur-lg text-[10px] border border-white/0 flex flex-row gap-1 rounded-md items-center py-0.5 px-2 z-50 hover:bg-[rgba(0,0,0,0.50)] transition-all duration-200 ease-in-out hover:cursor-pointer"
+                href="https://kentvillalun.github.io/portfolio/"
+                target="_blank"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <ExternalLink size={14} />
+                <p className="text-xs font-medium">Live</p>
+              </a>
+              <img
+                src={portfoliopic}
+                alt=""
+                className="group-hover:scale-105 transition-all "
+              />
+
+              {/* this div will be a tag later on */}
+              <div className="p-5 flex flex-col gap-5">
+                <div className="flex flex-col gap-2 justify-between h-full">
+                  <h3 className="text-lg font-bold group-hover:text-blue-500 text-white transition-all ease-in-out">
+                    Personal Portfolio
+                  </h3>
+                  <p className="text-sm text-white/70 overflow-hidden mb-2">
+                    A modern portfolio website where I display my projects and
+                    technical stacks
+                  </p>
+                  <div className="flex flex-wrap gap-1 mt-auto">
+                    {portfolio.map(({ name, Icon, color }) => (
+                      <span
+                        key={name}
+                        className="flex items-center gap-2 px-2 py-1 rounded-[50px] bg-[#FFFFFF05] text-[10px] border border-[#36363650] justify-center cursor-pointer transition-colors "
+                      >
+                        <Icon className={`w-4 h-4`} fill={color} />
+                        <span className="text-xs font-medium text-white/80">
+                          {name}
+                        </span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="rounded-lg border border-white/10 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025] hover:bg-white/10 relative "
+              onClick={() =>
+                window.open(
+                  "https://github.com/kentvillalun/iBadyetKon",
+                  "_blank",
+                )
+              }
+            >
+              {/* <a
+                className="top-3 right-3 absolute bg-[rgba(0,0,0,0.25)] backdrop-blur-lg text-[10px] border border-white/0 flex flex-row gap-1 rounded-md items-center py-0.5 px-2 z-50 hover:bg-[rgba(0,0,0,0.50)] transition-all duration-200 ease-in-out hover:cursor-pointer"
+                href="https://kentvillalun.github.io/portfolio/"
+                target="_blank"
+              >
+                <ExternalLink size={14} />
+                <p className="text-xs font-medium">Live</p>
+              </a> */}
+              <img
+                src={ibadyetkon}
+                alt=""
+                className="group-hover:scale-105 transition-all "
+              />
+
+              {/* this div will be a tag later on */}
+              <div className="p-5 flex flex-col gap-5">
+                <div className="flex flex-col gap-2 justify-between h-full">
+                  <h3 className="text-lg font-bold group-hover:text-blue-500 text-white transition-all ease-in-out">
+                    iBadyetKon
+                  </h3>
+                  <p className="text-sm text-white/70 overflow-hidden mb-2">
+                    A budgeting web system that helps you track expenses and
+                    manage your money with ease.
+                  </p>
+                  <div className="flex flex-wrap gap-1 mt-auto">
+                    {iBadyetKon.map(({ name, Icon, color }) => (
+                      <span
+                        key={name}
+                        className="flex items-center gap-2 px-2 py-1 rounded-[50px] bg-[#FFFFFF05] text-[10px] border border-[#36363650] justify-center cursor-pointer transition-colors "
+                      >
+                        <Icon className={`w-4 h-4`} fill={color} />
+                        <span className="text-xs font-medium text-white/80">
+                          {name}
+                        </span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </RevealOnScroll>
     </section>

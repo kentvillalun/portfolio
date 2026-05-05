@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { MenuIcon } from "./icons/MenuIcon";
 import { CloseIcon } from "./icons/CloseIcon";
 import { MobileMenu } from "./MobileMenu";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = ({
   menuOpen,
@@ -9,6 +10,7 @@ export const Navbar = ({
   isScrolled,
   setIsScrolled,
 }) => {
+  const navigate = useNavigate();
   // useEffect(() => {
   //     document.body.style.overflow = menuOpen ? "hidden" : "";
   // }, [menuOpen])
@@ -29,6 +31,13 @@ export const Navbar = ({
     };
   }, []);
 
+  const handleNavClick = (id) => {
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
+
   return (
     <nav
       className={`fixed z-40 bg-transparent md:rounded-full text-white inset-x-0  md:mx-auto transition-all duration-400 text-sm rounded-md border-transparent ease-in-out top-3
@@ -41,7 +50,10 @@ export const Navbar = ({
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-row justify-between items-center h-12 md:mx-8 ">
-          <a className="text-lg font-bold text-white" href="#home">
+          <a
+            className="text-lg font-bold text-white hover:cursor-pointer"
+            onClick={() => handleNavClick("home")}
+          >
             Kent
           </a>
 
@@ -54,34 +66,38 @@ export const Navbar = ({
 
           <div className="hidden md:flex items-center space-x-8">
             <a
-              href="#about"
-              className="text-gray-300 hover:text-white transition-colors "
+              onClick={() => handleNavClick("about")}
+              className="text-gray-300 hover:text-white transition-colors hover:cursor-pointer"
             >
               About
             </a>
 
             <a
-              href="#projects"
-              className="text-gray-300 hover:text-white transition-colors"
+              onClick={() => handleNavClick("projects")}
+              className="text-gray-300 hover:text-white transition-colors hover:cursor-pointer"
             >
               Projects
             </a>
 
             <a
-              href="#skills"
-              className="text-gray-300 hover:text-white transition-colors"
+              onClick={() => handleNavClick("skills")}
+              className="text-gray-300 hover:text-white transition-colors hover:cursor-pointer"  
             >
               Skills
             </a>
 
             <a
-              href="#contact"
-              className="text-gray-300 hover:text-white transition-colors "
+              onClick={() => handleNavClick("contact")}
+              className="text-gray-300 hover:text-white transition-colors hover:cursor-pointer"
             >
               Contact
             </a>
           </div>
-          <a className="hidden md:flex items-center py-1.5 px-4 rounded-lg bg-black cursor-pointer transform hover:-translate-y-0.5 shadow-lg border-white/10 border" download href="Kent-Villalun-Resume.pdf"> 
+          <a
+            className="hidden md:flex items-center py-1.5 px-4 rounded-lg bg-black cursor-pointer transform hover:-translate-y-0.5 shadow-lg border-white/10 border"
+            download
+            href="Kent-Villalun-Resume.pdf"
+          >
             Resume
           </a>
         </div>

@@ -5,12 +5,12 @@ import { useState, useEffect } from "react";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
-import { Projects } from "./components/sections/Projects"
+import { Projects } from "./components/sections/Projects";
 import { Skills } from "./components/sections/Skills";
 import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/sections/Footer";
-import { Routes, Route } from 'react-router-dom';
-
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { ProjectsPage } from "./components/pages/ProjectsPage";
 
 function LandingPage({ isLoaded }) {
   return (
@@ -24,34 +24,31 @@ function LandingPage({ isLoaded }) {
   );
 }
 
-
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  
+
   useEffect(() => {
     const root = document.documentElement;
     const body = document.body;
 
     if (!isLoaded) {
       // Disable scroll while loading
-      root.style.overflow = 'hidden';
-      body.style.overflow = 'hidden';
+      root.style.overflow = "hidden";
+      body.style.overflow = "hidden";
     } else {
       // Restore scroll when loading completes
-      root.style.overflow = '';
-      body.style.overflow = '';
+      root.style.overflow = "";
+      body.style.overflow = "";
     }
 
     // Cleanup on unmount just in case
     return () => {
-      root.style.overflow = '';
-      body.style.overflow = '';
+      root.style.overflow = "";
+      body.style.overflow = "";
     };
   }, [isLoaded]);
-  
-  
 
   return (
     <>
@@ -61,13 +58,29 @@ function App() {
           isLoaded ? "opacity-100" : "opacity-0"
         } bg-[#060A14] text-white`}
       >
-        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} isScrolled={isScrolled} setIsScrolled={setIsScrolled}/>
-        
-        <Home isLoaded={isLoaded} />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
+        <Navbar
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
+          isScrolled={isScrolled}
+          setIsScrolled={setIsScrolled}
+        />
+
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Home isLoaded={isLoaded} />
+                <About />
+                <Projects />
+                <Skills />
+                <Contact />
+              </>
+            }
+          />
+          <Route path="/projects" element={<ProjectsPage />} /> 
+        </Routes>
+
         <Footer />
       </div>
     </>
@@ -93,7 +106,7 @@ function App() {
     //       <Route path="/" element={<LandingPage isLoaded={isLoaded} />} />
     //       {/* Add other pages here */}
     //       {/* <Route path="/projects" element={<ProjectsPage />} /> */}
-          
+
     //     </Routes>
 
     //     {/* ✅ Keep Footer always visible */}

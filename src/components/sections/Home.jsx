@@ -55,7 +55,7 @@ export const Home = ({ isLoaded }) => {
               <span className="">Download Resume</span>
             </a>
             <a
-              href="#contact"
+              onClick={() => document.getElementById("contact").scrollIntoView({ behavior: 'smooth'})}
               className="flex flex-row gap-3.25 py-4 px-10.5 rounded-lg bg-[#3B82F6] hover:bg-[#0876e4] transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-[0,0,15px_rgba(59, 130, 246, 0.5)] font-semibold"
             >
               <MailIcon />

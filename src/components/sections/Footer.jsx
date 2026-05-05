@@ -2,13 +2,24 @@ import { RevealOnScroll } from "../RevealOnScroll";
 import { GithubIcon } from "../icons/GithubIcon";
 import { LinkedinIcon } from "../icons/LinkedinIcon";
 import { MailIcon } from "../icons/MailIcon";
+import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
+
+  const navigate = useNavigate()
+
+  const handleNavClick = (id) => {
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
+
   return (
     <section className="min-h-50% bg-[#060A14] flex py-10 justify-center border border-t-white/10 border-r-0 border-l-0 border-b-0 items-center ">
       <RevealOnScroll>
         <div className="">
-          <div className="flex md:flex-row mx-auto px-6 max-w-3xl lg:min-w-5xl lg:max-w-7xl md:max-w-5xl gap-10 justify-between flex-col border-b-white/10 border border-t-0 border-r-0 border-l-0 mb-3">
+          <div className="flex md:flex-row mx-auto px-6 max-w-3xl lg:min-w-6xl lg:max-w-7xl md:max-w-5xl gap-10 justify-between flex-col border-b-white/10 border border-t-0 border-r-0 border-l-0 mb-3">
             <div className="">
               <div className="mb-4.75">
                 <h3 className="font-bold text-[24px] mb-1.5">Kent</h3>
@@ -50,26 +61,26 @@ export const Footer = () => {
                 <h3 className="font-medium text-[16px] mb-4">Quick Links</h3>
                 <div className="flex flex-col gap-3">
                   <a
-                    href="#about"
-                    className="text-[15px] hover:font-medium text-[#94A3B8] hover:text-white transition-colors"
+                    onClick={() => handleNavClick("about")}
+                    className="text-[15px] hover:font-medium text-[#94A3B8] hover:text-white transition-colors hover:cursor-pointer"
                   >
                     About
                   </a>
                   <a
-                    href="#projects"
-                    className="text-[15px] hover:font-medium text-[#94A3B8] hover:text-white transition-colors"
+                    onClick={() => handleNavClick("projects")}
+                    className="text-[15px] hover:font-medium text-[#94A3B8] hover:text-white transition-colors hover:cursor-pointer" 
                   >
                     Projects
                   </a>
                   <a
-                    href="#skills"
-                    className="text-[15px] hover:font-medium text-[#94A3B8] hover:text-white transition-colors"
+                    onClick={() => handleNavClick("skills")}
+                    className="text-[15px] hover:font-medium text-[#94A3B8] hover:text-white transition-colors hover:cursor-pointer" 
                   >
                     Skills
                   </a>
                   <a
-                    href="#contact"
-                    className="text-[15px] hover:font-medium text-[#94A3B8] hover:text-white transition-colors"
+                    onClick={() => handleNavClick("contact")}
+                    className="text-[15px] hover:font-medium text-[#94A3B8] hover:text-white transition-colors hover:cursor-pointer"
                   >
                     Contact
                   </a>
