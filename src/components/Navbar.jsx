@@ -34,7 +34,7 @@ export const Navbar = ({
       className={`fixed z-40 bg-transparent md:rounded-full text-white inset-x-0  md:mx-auto transition-all duration-400 text-sm rounded-md border-transparent ease-in-out top-3
         ${
           isScrolled
-            ? "top-4 bg-[rgba(0,0,0,0.25)] backdrop-blur-lg lg:max-w-5xl md:max-w-3xl m-6 border border-white/0 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_10px_30px_rgba(0,0,0,0.4)] "
+            ? "top-4 bg-[rgba(0,0,0,0.25)] backdrop-blur-lg lg:max-w-4xl md:max-w-3xl m-6 border border-white/0 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_10px_30px_rgba(0,0,0,0.4)] "
             : "top-0 max-w-7xl"
         }
     `}

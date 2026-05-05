@@ -54,8 +54,9 @@ export const MobileMenu = ({
         </a>
 
         <a
-          href=""
+          href="Kent-Villalun-Resume.pdf"
           className="text-white transition-colors "
+          download 
           onClick={() => setMenuOpen(false)}
         >
           Resume

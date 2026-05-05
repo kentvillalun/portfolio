@@ -4,13 +4,20 @@ import { JsIcon } from "../icons/JsIcon";
 import { PhpIcon } from "../icons/PhpIcon";
 import { GithubIcon } from "../icons/GithubIcon";
 import { ReactIcon } from "../icons/ReactIcon";
-import ecoprofit from "/src/assets/images/ecoprofit.png"
+import ecoprofit from "/src/assets/images/ecoprofit.png";
 import { TailwindIcon } from "../icons/TailwindIcon";
 import { RevealOnScroll } from "../RevealOnScroll";
 import { Meteors } from "../ui/Meteors";
 import ibadyetkon from "/src/assets/images/ibadyetkon.png";
 import portfoliopic from "/src/assets/images/portfolio.png";
+import sjf from "/src/assets/images/sjf-algorithm.png";
+import lru from "/src/assets/images/lru-algorithm.png";
+import { ExpressIcon } from "../icons/ExpressIcon";
+import { NextIcon } from "../icons/NextIcon";
 import { color } from "motion";
+import { PostgresIcon } from "../icons/PostgresIcon";
+import { Prismaicon } from "../icons/PrismaIcon";
+import { ExternalLink } from "lucide-react";
 
 
 export const Projects = () => {
@@ -27,19 +34,30 @@ export const Projects = () => {
   ];
 
   const ecoProfit = [
-    { name: "Next.js", Icon: ReactIcon, color: "#61DAFB"},
-    { name: "Express.js", Icon: ReactIcon, color: ""},
-    { name: "Tailwind CSS", Icon: TailwindIcon, color: "#06B6D4"},
-    { name: "PostgreSQL", Icon: ReactIcon, color: ""},
-    { name: "Prisma ORM", Icon: ReactIcon, color: ""},
-  ]
+    { name: "Next.js", Icon: NextIcon, color: "#000000" },
+    { name: "Express", Icon: ExpressIcon, color: "#000000" },
+    { name: "Tailwind CSS", Icon: TailwindIcon, color: "#06B6D4" },
+    { name: "PostgreSQL", Icon: PostgresIcon, color: "#4169E1" },
+    { name: "Prisma ORM", Icon: Prismaicon, color: "#2D3748" },
+  ];
+
+  const sjfAlg = [
+    { name: "React.js", Icon: ReactIcon, color: "#61DAFB" },
+    { name: "Tailwind CSS", Icon: TailwindIcon, color: "#06B6D4" },
+  ];
+
+  const lruAlg = [
+    { name: "React.js", Icon: ReactIcon, color: "#61DAFB" },
+    { name: "Tailwind CSS", Icon: TailwindIcon, color: "#06B6D4" },
+  ];
+
 
   return (
     <section
       id="projects"
       className="min-h-screen flex items-center justify-center py-20 relative"
     >
-      <Meteors number={25}/>
+      <Meteors number={25} />
       <RevealOnScroll>
         <div className="mx-auto px-6 lg:px-0 max-w-3xl md:max-w-5xl">
           <div className="mb-11.25 text-center">
@@ -52,101 +70,142 @@ export const Projects = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-lg border border-white/10 hover:border-blue-900 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025]">
+          {/* EcoProfit */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-3">
+            <a
+              className="rounded-lg border border-white/10 overflow-hidden hover:-translate-y-1 transition-all group bg-white/2 hover:bg-white/10 relative "
+              href="https://github.com/kentvillalun/ecoprofit"
+              target="_blank"
+            >
+              <a
+                className="top-3 right-3 absolute bg-[rgba(0,0,0,0.25)] backdrop-blur-lg text-[10px] border border-white/0 flex flex-row gap-1 rounded-md items-center py-0.5 px-2 z-50 hover:bg-[rgba(0,0,0,0.50)] transition-all duration-200 ease-in-out hover:cursor-pointer"
+                href="https://ecoprofit-app.vercel.app/barangay/login"
+                target="_blank"
+              >
+                <ExternalLink size={14} />
+                <p className="text-xs font-medium">Live</p>
+              </a>
               <img
                 src={ecoprofit}
                 alt=""
                 className="group-hover:scale-105 transition-all "
               />
+
               {/* this div will be a tag later on */}
-              <div className="p-6 flex flex-col gap-5">
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-xl font-bold">EcoProfit</h3>
-                  <p>
-                    A full-stack PWA barangay waste management system designed to automate the process of collecting, managing, and utilizing recyclable materials in a barangay.
+              <div className="p-5 flex flex-col gap-5">
+                <div className="flex flex-col gap-2 justify-between">
+                  <h3 className="text-lg font-bold group-hover:text-blue-500 text-white transition-all ease-in-out">EcoProfit</h3>
+                  <p className="text-sm text-white/70 overflow-hidden mb-2">
+                    A full-stack PWA that helps barangays manage recyclable
+                    material collections, redemption programs, and finances.
                   </p>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-1 mt-auto">
                     {ecoProfit.map(({ name, Icon, color }) => (
                       <span
                         key={name}
-                        className="flex items-center gap-1 px-3 py-1.5 rounded-[50px] bg-[#FFFFFF05] text-[10px] border border-[#36363650] justify-center cursor-pointer hover:bg-[#FFFFFF10] transition-colors "
+                        className="flex items-center gap-2 px-2 py-1 rounded-[50px] bg-[#FFFFFF05] text-[10px] border border-[#36363650] justify-center cursor-pointer transition-colors "
                       >
-                        <Icon className={`w-2.5 h-2.5`} fill={color} />
-                        <span className="">{name}</span>
+                        <Icon className={`w-4 h-4`} fill={color} />
+                        <span className="text-xs font-medium text-white/80">
+                          {name}
+                        </span>
                       </span>
                     ))}
                   </div>
                 </div>
-
-                <div className="flex flex-row gap-2 justify-end">
-                  <a
-                    href="https://ecoprofit-app.vercel.app/barangay/login"
-                    className="py-3 px-5 bg-[#3B82F6] hover:bg-[#0876e4] rounded-lg transition-all"
-                    target="_blank"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href="https://github.com/kentvillalun/ecoprofit"
-                    className="rounded-lg bg-[#FFFFFF05] py-3 px-4 border border-[#36363650] hover:bg-[#FFFFFF10] transition-colors"
-                    target="_blank"
-                  >
-                    <GithubIcon />
-                  </a>
-                </div>
               </div>
-            </div>
+            </a>
 
-            <div className="rounded-lg border border-white/10 hover:border-blue-900 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025]"> 
-            <div className="">
 
             
+            <a
+              className="rounded-lg border border-white/10 overflow-hidden hover:-translate-y-1 transition-all group bg-white/2 hover:bg-white/10 relative "
+              href="https://github.com/kentvillalun/sjf-scheduling-simulator"
+              target="_blank"
+            >
+              <a
+                className="top-3 right-3 absolute bg-[rgba(0,0,0,0.25)] backdrop-blur-lg text-[10px] border border-white/0 flex flex-row gap-1 rounded-md items-center py-0.5 px-2 z-50 hover:bg-[rgba(0,0,0,0.50)] transition-all duration-200 ease-in-out hover:cursor-pointer"
+                href="https://sjf-scheduling-simulator.vercel.app/"
+                target="_blank"
+              >
+                <ExternalLink size={14} />
+                <p className="text-xs font-medium">Live</p>
+              </a>
               <img
-                src={portfoliopic}
+                src={sjf}
                 alt=""
                 className="group-hover:scale-105 transition-all "
               />
+
               {/* this div will be a tag later on */}
-              <div className="p-6 flex flex-col gap-5 ">
-                <div className="flex flex-col gap-2 ">
-                  <h3 className="text-xl font-bold">Personal Portfolio</h3>
-                  <p>
-                    A modern portfolio website where I display my projects and
-                    technical stack.
+              <div className="p-5 flex flex-col gap-5">
+                <div className="flex flex-col gap-2 justify-between">
+                  <h3 className="text-lg font-bold group-hover:text-blue-500 text-white transition-all ease-in-out">SJF Algorithm Simulator</h3>
+                  <p className="text-sm text-white/70 overflow-hidden max-h-15 mb-2">
+                    An interactive simulator where users input processes with burst times and arrival times, then visualize execution via a Gantt chart with computed metrics like CPU Utilization, throughput, average turnaround time and average waiting time.
                   </p>
-                  <div className="flex flex-wrap gap-1">
-                    {portfolio.map(({ name, Icon, color }) => (
+                  <div className="flex flex-wrap gap-1 mt-auto">
+                    {sjfAlg.map(({ name, Icon, color }) => (
                       <span
                         key={name}
-                        className="flex items-center gap-1 px-3 py-1.5 rounded-[50px] bg-[#FFFFFF05] text-[10px] border border-[#36363650] justify-center cursor-pointer hover:bg-[#FFFFFF10] transition-colors"
+                        className="flex items-center gap-2 px-2 py-1 rounded-[50px] bg-[#FFFFFF05] text-[10px] border border-[#36363650] justify-center cursor-pointer transition-colors "
                       >
-                        <Icon className={`w-2.5 h-2.5`} fill={color} />
-                        <span className="">{name}</span>
+                        <Icon className={`w-4 h-4`} fill={color} />
+                        <span className="text-xs font-medium text-white/80">
+                          {name}
+                        </span>
                       </span>
                     ))}
                   </div>
                 </div>
-                </div>
+              </div>
+            </a>
 
-                <div className="flex flex-row gap-2 justify-end">
-                  <a
-                    href=""
-                    className="py-3 px-5 bg-[#3B82F6] hover:bg-[#0876e4] rounded-lg transition-all"
-                    target="_blank"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href="https://github.com/kentvillalun/portfolio"
-                    className="rounded-lg bg-[#FFFFFF05] py-3 px-4 border border-[#36363650] hover:bg-[#FFFFFF10] transition-colors"
-                    target="_blank"
-                  >
-                    <GithubIcon />
-                  </a>
+
+            <a
+              className="rounded-lg border border-white/10 overflow-hidden hover:-translate-y-1 transition-all group bg-white/2 hover:bg-white/10 relative "
+              href="https://github.com/kentvillalun/lru-page-replacement-alg"
+              target="_blank"
+            >
+              <a
+                className="top-3 right-3 absolute bg-[rgba(0,0,0,0.25)] backdrop-blur-lg text-[10px] border border-white/0 flex flex-row gap-1 rounded-md items-center py-0.5 px-2 z-50 hover:bg-[rgba(0,0,0,0.50)] transition-all duration-200 ease-in-out hover:cursor-pointer"
+                href="https://lru-page-replacement-alg.vercel.app/"
+                target="_blank"
+              >
+                <ExternalLink size={14} />
+                <p className="text-xs font-medium">Live</p>
+              </a>
+              <img
+                src={lru}
+                alt=""
+                className="group-hover:scale-105 transition-all "
+              />
+
+              {/* this div will be a tag later on */}
+              <div className="p-5 flex flex-col gap-5">
+                <div className="flex flex-col gap-2 justify-between">
+                  <h3 className="text-lg font-bold group-hover:text-blue-500 text-white transition-all ease-in-out">LRU Page Replacement Simulator</h3>
+                  <p className="text-sm text-white/70 overflow-hidden max-h-15 mb-2">
+                    An interactive simulator where users input a page reference string and visualize hit or miss resutls in a step-by-step table format.
+                  </p>
+                  <div className="flex flex-wrap gap-1 mt-auto">
+                    {lruAlg.map(({ name, Icon, color }) => (
+                      <span
+                        key={name}
+                        className="flex items-center gap-2 px-2 py-1 rounded-[50px] bg-[#FFFFFF05] text-[10px] border border-[#36363650] justify-center cursor-pointer transition-colors "
+                      >
+                        <Icon className={`w-4 h-4`} fill={color} />
+                        <span className="text-xs font-medium text-white/80">
+                          {name}
+                        </span>
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
+            
+            
           </div>
         </div>
       </RevealOnScroll>
