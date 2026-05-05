@@ -4,11 +4,13 @@ import { JsIcon } from "../icons/JsIcon";
 import { PhpIcon } from "../icons/PhpIcon";
 import { GithubIcon } from "../icons/GithubIcon";
 import { ReactIcon } from "../icons/ReactIcon";
+import ecoprofit from "/src/assets/images/ecoprofit.png"
 import { TailwindIcon } from "../icons/TailwindIcon";
 import { RevealOnScroll } from "../RevealOnScroll";
 import { Meteors } from "../ui/Meteors";
 import ibadyetkon from "/src/assets/images/ibadyetkon.png";
 import portfoliopic from "/src/assets/images/portfolio.png";
+import { color } from "motion";
 
 
 export const Projects = () => {
@@ -24,6 +26,14 @@ export const Projects = () => {
     { name: "Tailwind CSS", Icon: TailwindIcon, color: "#06B6D4" },
   ];
 
+  const ecoProfit = [
+    { name: "Next.js", Icon: ReactIcon, color: "#61DAFB"},
+    { name: "Express.js", Icon: ReactIcon, color: ""},
+    { name: "Tailwind CSS", Icon: TailwindIcon, color: "#06B6D4"},
+    { name: "PostgreSQL", Icon: ReactIcon, color: ""},
+    { name: "Prisma ORM", Icon: ReactIcon, color: ""},
+  ]
+
   return (
     <section
       id="projects"
@@ -31,7 +41,7 @@ export const Projects = () => {
     >
       <Meteors number={25}/>
       <RevealOnScroll>
-        <div className="mx-auto px-6 max-w-3xl md:max-w-5xl">
+        <div className="mx-auto px-6 lg:px-0 max-w-3xl md:max-w-5xl">
           <div className="mb-11.25 text-center">
             <h2 className="font-bold text-3xl md:text-4xl mb-5">
               Featured Projects
@@ -45,23 +55,22 @@ export const Projects = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-lg border border-white/10 hover:border-blue-900 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025]">
               <img
-                src={ibadyetkon}
+                src={ecoprofit}
                 alt=""
                 className="group-hover:scale-105 transition-all "
               />
               {/* this div will be a tag later on */}
               <div className="p-6 flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-xl font-bold">iBadyetKon</h3>
+                  <h3 className="text-xl font-bold">EcoProfit</h3>
                   <p>
-                    A smart budgeting web app that helps you track expenses and
-                    manage your money with ease.
+                    A full-stack PWA barangay waste management system designed to automate the process of collecting, managing, and utilizing recyclable materials in a barangay.
                   </p>
                   <div className="flex flex-wrap gap-1">
-                    {iBadyetKon.map(({ name, Icon, color }) => (
+                    {ecoProfit.map(({ name, Icon, color }) => (
                       <span
                         key={name}
-                        className="flex items-center gap-1 px-3 py-1.5 rounded-[50px] bg-[#FFFFFF05] text-[10px] border border-[#36363650] justify-center cursor-pointer hover:bg-[#FFFFFF10] transition-colors"
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-[50px] bg-[#FFFFFF05] text-[10px] border border-[#36363650] justify-center cursor-pointer hover:bg-[#FFFFFF10] transition-colors "
                       >
                         <Icon className={`w-2.5 h-2.5`} fill={color} />
                         <span className="">{name}</span>
@@ -72,14 +81,14 @@ export const Projects = () => {
 
                 <div className="flex flex-row gap-2 justify-end">
                   <a
-                    href=""
+                    href="https://ecoprofit-app.vercel.app/barangay/login"
                     className="py-3 px-5 bg-[#3B82F6] hover:bg-[#0876e4] rounded-lg transition-all"
                     target="_blank"
                   >
                     Live Demo
                   </a>
                   <a
-                    href="https://github.com/kentvillalun/iBadyetKon"
+                    href="https://github.com/kentvillalun/ecoprofit"
                     className="rounded-lg bg-[#FFFFFF05] py-3 px-4 border border-[#36363650] hover:bg-[#FFFFFF10] transition-colors"
                     target="_blank"
                   >
@@ -89,14 +98,17 @@ export const Projects = () => {
               </div>
             </div>
 
-            <div className="rounded-lg border border-white/10 hover:border-blue-900 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025]">
+            <div className="rounded-lg border border-white/10 hover:border-blue-900 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025]"> 
+            <div className="">
+
+            
               <img
                 src={portfoliopic}
                 alt=""
                 className="group-hover:scale-105 transition-all "
               />
               {/* this div will be a tag later on */}
-              <div className="p-6 flex flex-col gap-5">
+              <div className="p-6 flex flex-col gap-5 ">
                 <div className="flex flex-col gap-2 ">
                   <h3 className="text-xl font-bold">Personal Portfolio</h3>
                   <p>
@@ -114,6 +126,7 @@ export const Projects = () => {
                       </span>
                     ))}
                   </div>
+                </div>
                 </div>
 
                 <div className="flex flex-row gap-2 justify-end">

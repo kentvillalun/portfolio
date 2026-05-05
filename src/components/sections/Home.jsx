@@ -46,10 +46,14 @@ export const Home = ({ isLoaded }) => {
           </p>
 
           <div className="md:flex jusftify-center items-center gap-11 mx-auto hidden transition-all duration-300 ease-in-out">
-            <button className="flex flex-row gap-3.25 border border-white py-4 px-5.5 rounded-lg cursor-pointer transform hover:-translate-y-0.5 hover:shadow-[0,0,15px_rgba(59, 130, 246, 0.5)] transition-all font-semibold">
+            <a
+              className="flex flex-row gap-3.25 border border-white py-4 px-5.5 rounded-lg cursor-pointer transform hover:-translate-y-0.5 hover:shadow-[0,0,15px_rgba(59, 130, 246, 0.5)] transition-all font-semibold"
+              href="Kent-Villalun-Resume.pdf"
+              download
+            >
               <DownloadIcon />
               <span className="">Download Resume</span>
-            </button>
+            </a>
             <a
               href="#contact"
               className="flex flex-row gap-3.25 py-4 px-10.5 rounded-lg bg-[#3B82F6] hover:bg-[#0876e4] transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-[0,0,15px_rgba(59, 130, 246, 0.5)] font-semibold"
