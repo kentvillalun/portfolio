@@ -96,7 +96,7 @@ export const Navbar = ({
           <a
             className="hidden md:flex items-center py-1.5 px-4 rounded-lg bg-black cursor-pointer transform hover:-translate-y-0.5 shadow-lg border-white/10 border"
             download
-            href="Kent-Villalun-Resume.pdf"
+            href="/portfolio/Kent-Villalun-Resume.pdf"
           >
             Resume
           </a>

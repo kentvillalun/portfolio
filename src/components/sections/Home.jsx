@@ -48,7 +48,7 @@ export const Home = ({ isLoaded }) => {
           <div className="md:flex jusftify-center items-center gap-11 mx-auto hidden transition-all duration-300 ease-in-out">
             <a
               className="flex flex-row gap-3.25 border border-white py-4 px-5.5 rounded-lg cursor-pointer transform hover:-translate-y-0.5 hover:shadow-[0,0,15px_rgba(59, 130, 246, 0.5)] transition-all font-semibold"
-              href="Kent-Villalun-Resume.pdf"
+              href="/portfolio/Kent-Villalun-Resume.pdf"
               download
             >
               <DownloadIcon />
