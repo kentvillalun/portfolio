@@ -72,7 +72,7 @@ export const MobileMenu = ({
         </a>
 
         <a
-          href="Kent-Villalun-Resume.pdf"
+          href="/portfolio/Kent-Villalun-Resume.pdf"
           className="text-white transition-colors hover:cursor-pointer"
           download
           onClick={() => setMenuOpen(false)}
