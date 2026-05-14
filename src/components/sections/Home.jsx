@@ -29,7 +29,7 @@ export const Home = ({ isLoaded }) => {
       ></div>
 
       <RevealOnScroll>
-        <div className="z-10 text-center flex flex-col gap-9.25 mx-auto">
+        <div className="z-10 text-center flex flex-col gap-9.25 mx-auto px-6 md:px-0">
           <div className="">
             <span className="text-xl md:text-2xl transition-all">Hey! I'm</span>
             <h1 className="text-5xl font-bold md:text-7xl transition-all">
@@ -45,20 +45,20 @@ export const Home = ({ isLoaded }) => {
             web experiences.
           </p>
 
-          <div className="md:flex jusftify-center items-center gap-11 mx-auto hidden transition-all duration-300 ease-in-out">
+          <div className=" jusftify-center items-center md:gap-11 gap-5 mx-auto transition-all duration-300 ease-in-out text-sm md:text-base flex-row grid grid-cols-2">
             <a
-              className="flex flex-row gap-3.25 border border-white py-4 px-5.5 rounded-lg cursor-pointer transform hover:-translate-y-0.5 hover:shadow-[0,0,15px_rgba(59, 130, 246, 0.5)] transition-all font-semibold"
+              className="flex flex-row gap-3.25 border border-white py-4 md:px-5.5 px-4 rounded-lg cursor-pointer transform hover:-translate-y-0.5 hover:shadow-[0,0,15px_rgba(59, 130, 246, 0.5)] transition-all font-semibold items-center justify-center text-nowrap"
               href="/portfolio/Kent-Villalun-Resume.pdf"
               download
             >
-              <DownloadIcon />
+              <DownloadIcon className="hidden md:flex"/>
               <span className="">Download Resume</span>
             </a>
             <a
               onClick={() => document.getElementById("contact").scrollIntoView({ behavior: 'smooth'})}
-              className="flex flex-row gap-3.25 py-4 px-10.5 rounded-lg bg-[#3B82F6] hover:bg-[#0876e4] transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-[0,0,15px_rgba(59, 130, 246, 0.5)] font-semibold"
+              className="flex flex-row gap-3.25 py-4 md:px-10.5 px-4 rounded-lg bg-[#3B82F6] hover:bg-[#0876e4] transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-[0,0,15px_rgba(59, 130, 246, 0.5)] font-semibold items-center justify-center text-nowrap"
             >
-              <MailIcon />
+              <MailIcon className="hidden md:flex"/>
               <span className="">Get in Touch</span>
             </a>
           </div>
