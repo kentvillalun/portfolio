@@ -4,7 +4,7 @@ import { JsIcon } from "../icons/JsIcon";
 import { PhpIcon } from "../icons/PhpIcon";
 import { GithubIcon } from "../icons/GithubIcon";
 import { ReactIcon } from "../icons/ReactIcon";
-import ecoprofit from "/src/assets/images/ecoprofit.png";
+import ecoaid from "/src/assets/images/ecoaid.png";
 import { TailwindIcon } from "../icons/TailwindIcon";
 import { RevealOnScroll } from "../RevealOnScroll";
 import { Meteors } from "../ui/Meteors";
@@ -77,14 +77,14 @@ export const Projects = () => {
               className="rounded-lg border border-white/10 overflow-hidden hover:-translate-y-1 transition-all group bg-[#00000025] hover:bg-white/10 relative "
               onClick={() =>
                 window.open(
-                  "https://github.com/kentvillalun/ecoprofit",
+                  "https://github.com/kentvillalun/ecoaid",
                   "_blank",
                 )
               }
             >
               <a
                 className="top-3 right-3 absolute bg-[rgba(0,0,0,0.25)] backdrop-blur-lg text-[10px] border border-white/0 flex flex-row gap-1 rounded-md items-center py-0.5 px-2 z-50 hover:bg-[rgba(0,0,0,0.50)] transition-all duration-200 ease-in-out hover:cursor-pointer"
-                href="https://ecoprofit-app.vercel.app/barangay/login"
+                href="https://ecoaid-app.vercel.app/barangay/login"
                 target="_blank"
                 onClick={(e) => e.stopPropagation()}
               >
@@ -92,7 +92,7 @@ export const Projects = () => {
                 <p className="text-xs font-medium">Live</p>
               </a>
               <img
-                src={ecoprofit}
+                src={ecoaid}
                 alt=""
                 className="group-hover:scale-105 transition-all "
               />
@@ -101,7 +101,7 @@ export const Projects = () => {
               <div className="p-5 flex flex-col gap-5">
                 <div className="flex flex-col gap-2 justify-between">
                   <h3 className="text-lg font-bold group-hover:text-blue-500 text-white transition-all ease-in-out">
-                    EcoProfit
+                    EcoAid
                   </h3>
                   <p className="text-sm text-white/70 overflow-hidden mb-2">
                     A full-stack PWA that helps barangays manage recyclable
